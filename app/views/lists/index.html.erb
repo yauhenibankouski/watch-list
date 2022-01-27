@@ -1,0 +1,20 @@
+<div class="home-banner">
+  <%= render "/shared/navbar" %>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+    <h2>My Lists</h2>
+      <% @lists.each do |list| %>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-product-infos">
+              <%= link_to list.name, list_path(list.id) %>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
